@@ -8,7 +8,7 @@ use App\Http\Controllers\CustomAuthController;
 |--------------------------------------------------------------------------
 */
 Route::get('/', function(){
-    return view ('home') ;
+    return view ('components/header') ;
 });
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
