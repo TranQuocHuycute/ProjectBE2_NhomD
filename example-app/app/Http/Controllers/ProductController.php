@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Comment;
+
 
 class ProductController extends Controller
 {
@@ -35,7 +37,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**
@@ -44,9 +46,17 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $product = product::find($id);
+    //hàm get
+    // public function show($id)
+    // {
+    //     $product = product::find($id);
+    //     return $product;
+    // }
+    //hàm post
+    public function show(Request $request)
+    {   
+        $id = $request ->get('productId');
+        $product = Product::find($id);
         return $product;
     }
 

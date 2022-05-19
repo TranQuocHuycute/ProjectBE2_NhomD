@@ -11,7 +11,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "trantuochuycute/mypackage": "^10.6"
+        "thanhlk0803/mypackage": "^10.6"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
