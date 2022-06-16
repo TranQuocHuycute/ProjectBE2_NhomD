@@ -25,6 +25,7 @@ class CategorySeeder extends Seeder
                     'priority' => $category-> priority ,
                     'flag' => $category-> flag ,
                     'alpha2' => $category-> alpha2 ,
+                    'id' => $category-> id,
                 ]);
             }
             else{
@@ -33,6 +34,7 @@ class CategorySeeder extends Seeder
                     'slug' => $category-> slug ,
                     'priority' => $category-> priority ,
                     'flag' => $category-> flag ,
+                    'id' => $category-> id,
                 ]);
             }
             
