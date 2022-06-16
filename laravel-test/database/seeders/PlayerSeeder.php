@@ -22,6 +22,7 @@ class PlayerSeeder extends Seeder
         foreach ($categories->transfersIn as $index => $player) {
 
             DB::table('players')->insert([
+                'id' => $player->player->id,
                 'name' => $player->player->name,
                 'slug' => $player->player->slug,
                 'shortName' => $player->player->shortName,

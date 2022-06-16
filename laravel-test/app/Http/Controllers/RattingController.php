@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\player;
-use App\Http\Requests\StoreplayerRequest;
-use App\Http\Requests\UpdateplayerRequest;
+use App\Models\ratting;
+use App\Http\Requests\StorerattingRequest;
+use App\Http\Requests\UpdaterattingRequest;
 
-class PlayerController extends Controller
+class RattingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,6 @@ class PlayerController extends Controller
     public function index()
     {
         //
-        $obj = new Player();
-        $player = $obj-> get_all_data();
-        return view('playerlist',['player' => $player]);
     }
 
     /**
@@ -29,16 +26,15 @@ class PlayerController extends Controller
     public function create()
     {
         //
-        return view('');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreplayerRequest  $request
+     * @param  \App\Http\Requests\StorerattingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreplayerRequest $request)
+    public function store(StorerattingRequest $request)
     {
         //
     }
@@ -46,10 +42,10 @@ class PlayerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\player  $player
+     * @param  \App\Models\ratting  $ratting
      * @return \Illuminate\Http\Response
      */
-    public function show(player $player)
+    public function show(ratting $ratting)
     {
         //
     }
@@ -57,10 +53,10 @@ class PlayerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\player  $player
+     * @param  \App\Models\ratting  $ratting
      * @return \Illuminate\Http\Response
      */
-    public function edit(player $player)
+    public function edit(ratting $ratting)
     {
         //
     }
@@ -68,11 +64,11 @@ class PlayerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateplayerRequest  $request
-     * @param  \App\Models\player  $player
+     * @param  \App\Http\Requests\UpdaterattingRequest  $request
+     * @param  \App\Models\ratting  $ratting
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateplayerRequest $request, player $player)
+    public function update(UpdaterattingRequest $request, ratting $ratting)
     {
         //
     }
@@ -80,10 +76,10 @@ class PlayerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\player  $player
+     * @param  \App\Models\ratting  $ratting
      * @return \Illuminate\Http\Response
      */
-    public function destroy(player $player)
+    public function destroy(ratting $ratting)
     {
         //
     }

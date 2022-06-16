@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\player;
-use App\Http\Requests\StoreplayerRequest;
-use App\Http\Requests\UpdateplayerRequest;
+use Illuminate\Http\Request;
 
-class PlayerController extends Controller
+class TeamDetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class PlayerController extends Controller
     public function index()
     {
         //
-        $obj = new Player();
-        $player = $obj-> get_all_data();
-        return view('playerlist',['player' => $player]);
+        return view('teamdetail');
     }
 
     /**
@@ -29,16 +25,15 @@ class PlayerController extends Controller
     public function create()
     {
         //
-        return view('');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreplayerRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreplayerRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -46,10 +41,10 @@ class PlayerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\player  $player
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(player $player)
+    public function show($id)
     {
         //
     }
@@ -57,10 +52,10 @@ class PlayerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\player  $player
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(player $player)
+    public function edit($id)
     {
         //
     }
@@ -68,11 +63,11 @@ class PlayerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateplayerRequest  $request
-     * @param  \App\Models\player  $player
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateplayerRequest $request, player $player)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +75,10 @@ class PlayerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\player  $player
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(player $player)
+    public function destroy($id)
     {
         //
     }
