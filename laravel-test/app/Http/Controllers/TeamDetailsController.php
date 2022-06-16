@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\player;
 use Illuminate\Http\Request;
 
 class TeamDetailsController extends Controller
@@ -14,7 +14,10 @@ class TeamDetailsController extends Controller
     public function index()
     {
         //
-        return view('teamdetail');
+        $obj = new Player();
+        $player = $obj-> get_all_data();
+        
+        return view('teamdetail',['player' => $player]);
     }
 
     /**

@@ -11,9 +11,9 @@
 </head>
 
 <body>
-@foreach ($player as $player)
-    <p class="title">{{ $player->name }}</p>
-@endforeach
+<footer>
+        @include('module02')
+    </footer>
 </body>
 
 </html>
