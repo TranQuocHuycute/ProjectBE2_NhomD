@@ -39,12 +39,14 @@
         @include('module02')
     </footer>
 
-
+    @section('scripts')
+    <script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/public/js/jquery-2.2.1.min.js" type="text/javascript"></script>
+    <script src="{{ asset('/public/js/jquery-2.2.1.min.js') }}"></script>
+    <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
+    @endsection
 </body>
 
-@section('scripts')
-<script src="/public/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/public/js/jquery.2.2.1.min.js" type="text/javascript"></script>
-@endsection
+
 
 </html>
