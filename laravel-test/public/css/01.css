@@ -1,0 +1,18 @@
+.mgheader {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.mgheader ul li {
+  display: inline-block;
+}
+.mgheader ul .profile-image {
+  height: 30px;
+  width: 30px;
+  border: 50%;
+}
+.mgheader ul .txtheader {
+  height: 56px;
+  padding: 12px;
+  user-select: none;
+  color: white !important;
+}
