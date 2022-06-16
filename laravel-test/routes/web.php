@@ -33,3 +33,5 @@ Route::get('login/facebook/callback', [LoginController::class, 'handleFacebookCa
 // LOGIN GITHUB
 Route::get('login/github', [LoginController::class, 'redirectToGithub'])->name('login.github');
 Route::get('login/github/callback', [LoginController::class, 'handleGithubCallback']);
+
+Route::get('/hello', [App\Http\Controllers\HelloController::class, 'hello']);
