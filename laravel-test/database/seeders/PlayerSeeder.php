@@ -28,7 +28,7 @@ class PlayerSeeder extends Seeder
                 'shortName' => $player->player->shortName,
                 'position' => $player->player->position,
                 'userCount' => $player->player->userCount,
-               
+                'flags' => "https://www.sofascore.com/static/images/flags/vn.png",
 
 
             ]);

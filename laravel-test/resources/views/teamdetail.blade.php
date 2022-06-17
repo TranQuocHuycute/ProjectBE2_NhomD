@@ -47,14 +47,14 @@
                 </div>
             </div>
         </div>
+        <footer style="margin-right: 0;" >
 
+@include('module/02-content')
+
+</footer>
     </main>
-
-    <footer>
-
-        @include('module/02-content')
-
-    </footer>
+        
+    
 
     @section('scripts')
     <script src="{{ asset('/public/js/jquery-2.2.1.min.js') }}"></script>

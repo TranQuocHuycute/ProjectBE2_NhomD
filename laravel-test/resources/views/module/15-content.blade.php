@@ -26,7 +26,7 @@
         <div class="sc-2829e1d5-1 kEOano">
           @foreach ($player as $player)
           <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}">
-            <div class="sc-8cd91851-1 ipGgrS" style="width: 75px;"><img width="75" height="75" alt="Karim Benzema" src="https://api.sofascore.app/api/v1/player/3306/image" class="sc-a7ad0435-0 gluUez">
+            <div class="sc-8cd91851-1 ipGgrS" style="width: 75px;"><img width="75" height="75" alt="Karim Benzema" src="{{ $player->avatar }}" class="sc-a7ad0435-0 gluUez">
               <div class="sc-8cd91851-2 iKKRor">
                 <div class="sc-8cd91851-6 dKEjkb">{{ $player->userCount }}</div>
               </div>
@@ -36,7 +36,7 @@
               <div class="sc-8cd91851-5 eIszhL">
                 <div title="F" class="sc-8cd91851-13 hSFyrg">{{ $player->position }}</div>
               </div>
-              <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="https://www.sofascore.com/static/images/flags/fr.png" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div>
+              <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="{{ $player->flags }}" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div>
             </div>
             <button type="button"  class="btn btn-danger">delete</button>
           </a>

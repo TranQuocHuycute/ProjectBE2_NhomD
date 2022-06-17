@@ -22,6 +22,8 @@ class CreatePlayersTable extends Migration
             $table->string('shortName');
             $table->string('position');
             $table->integer('userCount');
+            $table->string('flags');
+            $table->string('avatar');
             $table->timestamps();
         });
     }
