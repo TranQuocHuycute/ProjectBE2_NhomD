@@ -25,6 +25,14 @@ use App\Http\Controllers\ModuleControler;
 |
 */
 
+
+Route::get('/', function () {
+    return view('welcome');
+});
+// Route::get('/player', [PlayerController::class,'index']);
+// player
+Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -34,7 +42,7 @@ use App\Http\Controllers\ModuleControler;
 
 Route::get('/home', [CategoryController::class,"index"]);
 //Route::get('/login', [LoginController::class,"login"]);
- 
+
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
 

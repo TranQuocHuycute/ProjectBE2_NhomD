@@ -35,7 +35,7 @@ class CategoryController extends Controller
             'flag' => 'required',
             'alpha2' => 'required',
         ]);
-        
+
         $data = $request->all();
         category::insert($data);
         return redirect("home")->withSuccess('created');

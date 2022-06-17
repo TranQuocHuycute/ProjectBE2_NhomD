@@ -1,0 +1,73 @@
+"uniqueTournaments": [
+    {
+        "name": "Superliga",
+        "slug": "superliga",
+        "category": {
+            "name": "Slovakia",
+            "slug": "slovakia",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "id": 23,
+            "flag": "slovakia",
+            "alpha2": "SK"
+        },
+        "userCount": 5609,
+        "id": 211
+    },
+    {
+        "name": "2. Liga",
+        "slug": "2-liga",
+        "category": {
+            "name": "Slovakia",
+            "slug": "slovakia",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "id": 23,
+            "flag": "slovakia",
+            "alpha2": "SK"
+        },
+        "userCount": 1100,
+        "id": 224
+    },
+    {
+        "name": "Slovensky Pohar",
+        "slug": "slovensky-pohar",
+        "category": {
+            "name": "Slovakia",
+            "slug": "slovakia",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "id": 23,
+            "flag": "slovakia",
+            "alpha2": "SK"
+        },
+        "userCount": 1189,
+        "id": 303
+    },
+    {
+        "name": "1. League Women",
+        "slug": "1-league-women",
+        "category": {
+            "name": "Slovakia",
+            "slug": "slovakia",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "id": 23,
+            "flag": "slovakia",
+            "alpha2": "SK"
+        },
+        "userCount": 420,
+        "id": 10560
+    },
