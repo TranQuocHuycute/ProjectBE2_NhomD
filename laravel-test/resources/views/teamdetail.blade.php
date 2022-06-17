@@ -33,9 +33,9 @@
             <div class="matches row">
 
                 <div class="col-7">
-
+                @include('module/10-content')
                     @include('module/14-content')
-                    @include('module/12-content')
+                    @include('module/11-content')
                     @include('module/15-content')
 
 
@@ -57,7 +57,6 @@
     </footer>
 
     @section('scripts')
-   
     <script src="{{ asset('/public/js/jquery-2.2.1.min.js') }}"></script>
     <script src="{{ asset('/public/js/bootstrap.min.js') }}"></script>
     @endsection

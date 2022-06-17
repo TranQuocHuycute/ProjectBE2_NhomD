@@ -27,7 +27,9 @@
                             <td></td>
                             <td class="text-center">Rating</td>
                         </tr>
+                        @foreach ($player as $player)
                         <tr>
+                       
                             <td class="text-center align-middle">1</td>
                             <td><img src="https://api.sofascore.app/api/v1/player/3306/image" class="img-player" width="42" height="42" alt=""
                                     width="21" height="21"></td>
@@ -37,8 +39,9 @@
                                         class="pt-1 pl-1">Forward</span></p>
                             </td>
                             <td class="text-center align-middle"><span class="rating">7.7</span></td>
+                         
                         </tr>
-                
+                        @endforeach
                     </table>
 
                     <button class="show-more" type="button">Show more</button>
