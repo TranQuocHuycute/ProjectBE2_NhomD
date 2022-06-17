@@ -1,0 +1,75 @@
+@import "../vars.less";
+.style-6 .football {
+  padding: 20px;
+  border-left: 1px solid rgba(170,161,161,0.4);
+  border-right: 1px solid rgba(170,161,161,0.4);
+}
+.style-6 .football .list_football li {
+  background: none;
+  border-left: none;
+  border-right: none;
+}
+.style-6 .football .list_football li .foot .foot_header {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.style-6 .football .list_football li .foot .foot_header .img_flag .img_football {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: .5px solid #dce0e4;
+  margin-left: calc(25%);
+}
+.style-6 .football .list_football li .foot .foot_header .name_football .country_name {
+  text-decoration: none;
+  color: #aaa1a1;
+}
+.style-6 .football .list_football li .foot .foot_header .name_football .country_name:hover {
+  color: #659ce4;
+}
+.style-6 .football .list_football li .foot .foot_header .name_football .team_name {
+  text-decoration: none;
+  color: #404040;
+}
+.style-6 .football .list_football li .foot .foot_header .name_football .team_name:hover {
+  color: #659ce4;
+}
+.style-6 .football .list_football li .foot .foot_header .sofaScore_ratings {
+  color: #17bb53;
+  font-size: .9rem;
+  text-align: center;
+}
+.style-6 .football .list_football li .foot .link_foot {
+  text-decoration: none;
+  color: #000;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot .match_time {
+  text-align: center;
+  color: #aaa1a1;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot .border-left {
+  border-left: 1px solid silver;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot .row .col-md-4 {
+  align-self: center;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot .row .col-md-4 .notifi {
+  text-align: center;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot .row .col-md-4 .notifi:hover {
+  color: red;
+}
+.style-6 .football .list_football li .foot .link_foot .list_date_foot:hover {
+  background: rgba(223,214,214,0.4);
+  border-radius: 5px;
+}
+.style-6 .football .list_football li .foot .link_foot:hover {
+  color: #000;
+}

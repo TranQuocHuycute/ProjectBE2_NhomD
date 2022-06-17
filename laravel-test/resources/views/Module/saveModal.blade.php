@@ -1,39 +1,53 @@
-<div class="modal fade" id="SaveleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="SaveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            
+
             <div class="modal-body">
-                <form>
+                {!! Form::open(['method' => 'POST', 'route' => 'name.add']) !!}
+                @csrf
+                {!! Form::label('name', 'Description') !!}
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">ID</label>
-                    <input type="text" class="form-control" id="id">
+                    {!! Form::label('name', 'Name') !!}
+                    {{ Form::text('name', '', array_merge(['class' => 'form-control'])) }}
+                    @if ($errors->has('name'))
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    @endif
                 </div>
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Name</label>
-                    <input type="text" class="form-control" id="name">
+                    {!! Form::label('name', 'Slug') !!}
+                    {{ Form::text('slug', '', array_merge(['class' => 'form-control'])) }}
+                    @if ($errors->has('slug'))
+                        <span class="text-danger">{{ $errors->first('slug') }}</span>
+                    @endif
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug">
+                    {!! Form::label('name', 'Priority') !!}
+                    {{ Form::text('priority', '', array_merge(['class' => 'form-control'])) }}
+                    @if ($errors->has('prority'))
+                        <span class="text-danger">{{ $errors->first('prority') }}</span>
+                    @endif
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Priority</label>
-                    <input type="text" class="form-control" id="priority">
+                    {!! Form::label('name', 'Flag') !!}
+                    {{ Form::text('flag', '', array_merge(['class' => 'form-control'])) }}
+                    @if ($errors->has('flag'))
+                        <span class="text-danger">{{ $errors->first('flag') }}</span>
+                    @endif
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Flag</label>
-                    <input type="text" class="form-control" id="flag">
+                    {!! Form::label('name', 'Alpha') !!}
+                    {{ Form::text('alpha2', '', array_merge(['class' => 'form-control'])) }}
+                    @if ($errors->has('alpha2'))
+                        <span class="text-danger">{{ $errors->first('alpha2') }}</span>
+                    @endif
                 </div>
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Alpha</label>
-                    <input type="text" class="form-control" id="alpha">
+                <div class="modal-footer">
+                    {!! Form::button('Close', ['class' => 'btn btn-secondary', 'data-bs-dismiss' => 'modal']) !!}
+                    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
                 </div>
-                </form>
+                {!! Form::close() !!}
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
-            </div>
+
         </div>
     </div>
-    </div>
+</div>
