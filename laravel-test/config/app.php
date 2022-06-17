@@ -161,7 +161,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
         Collective\Html\HtmlServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -234,9 +236,14 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Form' => Collective\Html\FormFacade::class,
+<<<<<<< HEAD
         'Html' => Collective\Html\HtmlFacade::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+=======
+      'Html' => Collective\Html\HtmlFacade::class,
+
+>>>>>>> origin/main
     ],
 
 ];

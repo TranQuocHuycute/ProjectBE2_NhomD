@@ -1,0 +1,71 @@
+@import "../vars.less";
+.style-7 {
+  padding: 10px;
+}
+.style-7 .top_player {
+  background: rgba(220,224,228,0.4);
+  padding: 10px;
+  border-radius: 5px;
+}
+.style-7 .top_player .herder_player {
+  margin-bottom: 20px;
+}
+.style-7 .top_player .player {
+  padding: 10px;
+}
+.style-7 .top_player .player .list_player a {
+  text-decoration: none;
+  color: #404040;
+  border-radius: 5px;
+  padding: 10px;
+}
+.style-7 .top_player .player .list_player a .col-md-1 {
+  align-self: center;
+}
+.style-7 .top_player .player .list_player a .col-md-3 {
+  align-self: center;
+}
+.style-7 .top_player .player .list_player a .col-md-3 .img-player {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+.style-7 .top_player .player .list_player a .col-md-6 {
+  align-self: center;
+}
+.style-7 .top_player .player .list_player a .col-md-6 .name,
+.style-7 .top_player .player .list_player a .col-md-6 .description {
+  font-size: smaller;
+}
+.style-7 .top_player .player .list_player a .col-md-2 {
+  align-self: center;
+}
+.style-7 .top_player .player .list_player a .col-md-2 .rank_player {
+  border: none;
+  background: #17bb53;
+  border-radius: 5px;
+}
+.style-7 .top_player .player .list_player:hover a {
+  background: #dce0e4;
+}
+.style-7 .top_player .player .team_player {
+  padding: 10px;
+}
+.style-7 .top_player .player .team_player .img_team {
+  width: 100%;
+  height: 200px;
+  border-radius: 2px;
+}
+.style-7 .top_player .player .show-more {
+  text-align: center;
+  margin-top: 20px;
+}
+.style-7 .top_player .player .show-more a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.style-7 .top_player .player .show-more a:hover {
+  background: #dce0e4;
+  text-decoration: underline;
+}
