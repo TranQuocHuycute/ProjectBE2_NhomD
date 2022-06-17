@@ -12,6 +12,8 @@
           <path d="M64 448h896v128h-896v-128z"></path>
           <path d="M64 704h896v128h-896v-128z"></path>
         </svg>List view</a>
+        <button type="button"  class="btn btn-primary">refresh</button>
+         
       <div width="104.80555725097656" fill="#0057a3" class="sc-94e3615d-0 kFiNEn"></div>
     </div>
 
@@ -22,24 +24,24 @@
 
 
         <div class="sc-2829e1d5-1 kEOano">
-          {{-- @foreach ($player as $player) --}}
-          {{-- <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}"> --}}
+          @foreach ($player as $player)
+          <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}">
             <div class="sc-8cd91851-1 ipGgrS" style="width: 75px;"><img width="75" height="75" alt="Karim Benzema" src="https://api.sofascore.app/api/v1/player/3306/image" class="sc-a7ad0435-0 gluUez">
               <div class="sc-8cd91851-2 iKKRor">
-                {{-- <div class="sc-8cd91851-6 dKEjkb">{{ $player->userCount }}</div> --}}
+                <div class="sc-8cd91851-6 dKEjkb">{{ $player->userCount }}</div>
               </div>
             </div>
-            {{-- <div class="sc-8cd91851-3 cmzgnH">{{ $player->name }}</div> --}}
+            <div class="sc-8cd91851-3 cmzgnH">{{ $player->name }}</div>
             <div class="sc-8cd91851-4 dKGIlX">
               <div class="sc-8cd91851-5 eIszhL">
-                {{-- <div title="F" class="sc-8cd91851-13 hSFyrg">{{ $player->position }}</div> --}}
+                <div title="F" class="sc-8cd91851-13 hSFyrg">{{ $player->position }}</div>
               </div>
-              {{-- <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="https://www.sofascore.com/static/images/flags/fr.png" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div> --}}
+              <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="https://www.sofascore.com/static/images/flags/fr.png" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div>
             </div>
+            <button type="button"  class="btn btn-danger">delete</button>
           </a>
-
-
-          {{-- @endforeach --}}
+          
+          @endforeach
 
         </div>
       </div>
