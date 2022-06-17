@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\TeamDetailsController;
 use Illuminate\Support\Facades\Route;
-use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\ModuleControler;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +18,17 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+//Route::get('/player', [PlayerController::class,'index']);
+// player
+//Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
-Route::get('/category', [CategoryController::class,"index"]);
-Route::get('/login', [LoginController::class,"login"]);
-
-// Route::get('/auth/login',[UserController::class,"sociallogin"]);
-// Route::get('/auth/google/redirect',[UserController::class,"redirectToGoogle"]);
-// Route::get('/google/callback', [UserController::class,"handleGoogleCallback"]);
+Route::get('/home', [CategoryController::class,"index"]);
+//Route::get('/login', [LoginController::class,"login"]);
 
 
 Route::get('auth/google', [UserController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [UserController::class, 'handleGoogleCallback']);
+

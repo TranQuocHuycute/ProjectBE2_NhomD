@@ -17,7 +17,7 @@ class CategoryController extends Controller
     {
         //
         $categories = category::get_all_data();
-        return view("category/category",["categories"=>$categories]);
+        return view("/module/21-content",["categories"=>$categories]);
     }
 
     /**
