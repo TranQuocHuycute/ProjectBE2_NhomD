@@ -35,7 +35,7 @@
   font-size: smaller;
 }
 .style-4 .top_leagues .list_leagues:hover {
-  background: rgba(229,232,235,0.2);
+  background: rgba(223,214,214,0.6);
 }
 .style-4 .top_leagues .list_leagues:hover a {
   color: #278adb;
