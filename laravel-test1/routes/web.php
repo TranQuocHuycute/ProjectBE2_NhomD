@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\PlayerController;
-use App\Http\Controllers\TeamDetailsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModuleControler;
 
@@ -20,6 +18,6 @@ use App\Http\Controllers\ModuleControler;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/player', [PlayerController::class,'index']);
-// player
-Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
+Route::get('/module-1',[ModuleControler::class,"Module"]);
+
+

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Rows;
 use App\Models\Team;
 use Illuminate\Database\Seeder;
 
@@ -17,12 +16,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-
         $this->call(TeamSeeder::class);
         $this->call(SeasonsSeeder::class);
-        $this->call(
-            PlayerSeeder::class,
-        );
-        $this->call(RowsSeeder::class);
+
     }
+
+
 }
