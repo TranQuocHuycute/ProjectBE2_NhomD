@@ -1,0 +1,51 @@
+.img-player {
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.title-player {
+    font-weight: bold;
+    color: #404040;
+}
+
+.rating {
+    background-color: #c0cc00;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.top-player {
+    background: #f1f2f5;
+    padding: 12px;
+}
+
+.top-player table tr:hover {
+    background: #dce0e4;
+    cursor: pointer;
+}
+
+.top-player .show-more {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #0057a3;
+}
+
+.top-player .show-more:hover {
+    transition: all 0.3s ease 0s;
+    background: #e7eaec;
+    color: #0a8dff;
+}
+
+.rating-7 {
+    color: #c0cc00;
+}
+
+.rating-6 {
+    color: #f4bc00;
+}
