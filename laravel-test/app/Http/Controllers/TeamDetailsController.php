@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\player;
+use App\Models\Rows;
 use Illuminate\Http\Request;
 use App\Models\Team;
 
@@ -15,18 +16,22 @@ class TeamDetailsController extends Controller
     public function index()
     {
 
-
+// '
+// SELECT DISTINCT teams.name FROM `rows` INNER JOIN teams ON rows.team_id = teams.id WHERE teams.tournaments_id = 626
+// '
 
     }
     public function getTeam(){
 
+
         $obj = new Player();
         $player = $obj-> get_all_data();
-        $teams = Team::get_all_team ();
-        $teams = Team::join("rows", function ($join) {
-            $join->on("rows.team_id", "=", "teams.id");
-        })->get();
-        return view('teamdetail',['player' => $player],['teams' => $teams]);
+        // $teams = Team::get_all_team ();
+        $rows = Rows::join('teams', 'rows.team_id', '=', 'teams.id')
+        ->where('teams.tournaments_id',626)->distinct()
+        ->get(['teams.*', 'teams.name']);
+
+        return view('teamdetail',['player' => $player],['rows' => $rows]);
     }
 
     /**
