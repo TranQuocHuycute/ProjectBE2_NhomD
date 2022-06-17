@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-
-
+        $this->call(CategorySeeder::class);
         $this->call(TeamSeeder::class);
         $this->call(SeasonsSeeder::class);
         $this->call(
             PlayerSeeder::class,
         );
         $this->call(RowsSeeder::class);
+
     }
 }
