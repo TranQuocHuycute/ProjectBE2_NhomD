@@ -29,9 +29,21 @@ class TeamDetailsController extends Controller
         // $teams = Team::get_all_team ();
         $rows = Rows::join('teams', 'rows.team_id', '=', 'teams.id')
         ->where('teams.tournaments_id',626)->distinct()
-        ->get(['teams.*', 'teams.name']);
+        ->get(['teams.*', 'teams.name','teams.id']);
 
         return view('teamdetail',['player' => $player],['rows' => $rows]);
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete($id)
+    {
+        Rows::destroy($id);
+        return redirect(route("playerdetail"));
     }
 
     /**
@@ -89,14 +101,5 @@ class TeamDetailsController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+
 }

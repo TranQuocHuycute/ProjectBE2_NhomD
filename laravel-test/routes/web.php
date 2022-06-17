@@ -12,7 +12,7 @@ use App\Http\Controllers\TournamentsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModuleControler;
-
+use App\Models\Rows;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Route::get('/', function () {
 });
 // Route::get('/player', [PlayerController::class,'index']);
 // player
-Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
+Route::get('/playerdetail', [TeamDetailsController::class,'getTeam'])->name("playerdetail");
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -52,6 +52,9 @@ Route::get('edit/{id}', [CategoryController::class,"edit"])->name("category.edit
 Route::get('remove/{id}', [CategoryController::class,"delete"])->name("category.delete");
 Route::post('edit-category', [CategoryController::class,"update"])->name("category.update");
 
+Route::get('remove/{id}', [TeamDetailsController::class,"delete"])->name("rows.delete");
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -68,7 +71,7 @@ Route::get('/', function () {
 
 Route::get('send-mail', [SendMailController::class, 'sendMail']);
 
-Auth::routes();
+// Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
