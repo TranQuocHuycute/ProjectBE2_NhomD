@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Standing;
-use App\Http\Requests\StoreStandingRequest;
-use App\Http\Requests\UpdateStandingRequest;
+use App\Models\uniqueTournamentss;
+use App\Http\Requests\StoreuniqueTournamentssRequest;
+use App\Http\Requests\UpdateuniqueTournamentssRequest;
 
-class StandingController extends Controller
+class UniqueTournamentssController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class StandingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreStandingRequest  $request
+     * @param  \App\Http\Requests\StoreuniqueTournamentssRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStandingRequest $request)
+    public function store(StoreuniqueTournamentssRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class StandingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\uniqueTournamentss  $uniqueTournamentss
      * @return \Illuminate\Http\Response
      */
-    public function show(Standing $standing)
+    public function show(uniqueTournamentss $uniqueTournamentss)
     {
         //
     }
@@ -53,10 +53,10 @@ class StandingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\uniqueTournamentss  $uniqueTournamentss
      * @return \Illuminate\Http\Response
      */
-    public function edit(Standing $standing)
+    public function edit(uniqueTournamentss $uniqueTournamentss)
     {
         //
     }
@@ -64,11 +64,11 @@ class StandingController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateStandingRequest  $request
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Http\Requests\UpdateuniqueTournamentssRequest  $request
+     * @param  \App\Models\uniqueTournamentss  $uniqueTournamentss
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateStandingRequest $request, Standing $standing)
+    public function update(UpdateuniqueTournamentssRequest $request, uniqueTournamentss $uniqueTournamentss)
     {
         //
     }
@@ -76,10 +76,10 @@ class StandingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\uniqueTournamentss  $uniqueTournamentss
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Standing $standing)
+    public function destroy(uniqueTournamentss $uniqueTournamentss)
     {
         //
     }

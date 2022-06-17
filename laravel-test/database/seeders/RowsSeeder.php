@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\seasons;
 use Exception;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,32 +16,39 @@ class RowsSeeder extends Seeder
      */
     public function run()
     {
-        $urlCategories = 'https://api.sofascore.com/api/v1/unique-tournament/626/season/40370/standings/total';
-        $categories = file_get_contents($urlCategories);
 
-        $categories = json_decode($categories);
-
-
-
-        foreach ($categories->standings[0]->rows as $index => $team) {
-
+        foreach (seasons::all() as $seasion) {
             try {
-                DB::table('rows')->insert([
-                    
-                    'position' => $team->position,
-                    'matches' => $team->matches,
-                    'wins' => $team->wins,
-                    'draws' => $team->draws,
-                    'scoresFor' => $team->scoresFor,
-                    'scoresAgainst' => $team->scoresAgainst,
-                    'points' => $team->points,
+                $urlStandings = 'https://api.sofascore.com/api/v1/unique-tournament/' . $seasion->tournaments_id . '/season/' . $seasion->id . '/standings/total';
 
-                ]);
-            } catch (Exception $e)
-            {
+                $standings  = file_get_contents($urlStandings);
+                if (!!$standings) {
+                    $standings  = json_decode($standings);
+
+                    foreach ($standings->standings as $standing) {
+                        foreach ($standing->rows as  $row) {
+                            try {
+                                DB::table('rows')->insert([
+                                    'team_id' => $row->team->id,
+                                    'position' => $row->position,
+                                    'losses' => $row->losses,
+                                    'id' => $row->id,
+                                    'matches' => $row->matches,
+                                    'wins' => $row->wins,
+                                    'draws' => $row->draws,
+                                    'scoresAgainst' => $row->scoresAgainst,
+                                    'points' => $row->points,
+
+                                ]);
+                            } catch (Exception $e) {
+                                continue;
+                            }
+                        }
+                    }
+                }
+            } catch (Exception $e) {
                 continue;
             }
         }
-
-        }
-   }
+    }
+}

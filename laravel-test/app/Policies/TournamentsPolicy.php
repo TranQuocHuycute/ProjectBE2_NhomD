@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Standing;
 use App\Models\User;
+use App\Models\tournaments;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class StandingPolicy
+class TournamentsPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class StandingPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Standing $standing)
+    public function view(User $user, tournaments $tournaments)
     {
         //
     }
@@ -48,10 +48,10 @@ class StandingPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Standing $standing)
+    public function update(User $user, tournaments $tournaments)
     {
         //
     }
@@ -60,10 +60,10 @@ class StandingPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Standing $standing)
+    public function delete(User $user, tournaments $tournaments)
     {
         //
     }
@@ -72,10 +72,10 @@ class StandingPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Standing $standing)
+    public function restore(User $user, tournaments $tournaments)
     {
         //
     }
@@ -84,10 +84,10 @@ class StandingPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Standing  $standing
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Standing $standing)
+    public function forceDelete(User $user, tournaments $tournaments)
     {
         //
     }

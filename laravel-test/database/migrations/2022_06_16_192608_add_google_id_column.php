@@ -25,6 +25,7 @@ class AddGoogleIdColumn extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         //
     }
 }

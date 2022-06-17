@@ -23,7 +23,10 @@ class CreateTeamsTable extends Migration
             $table->string('nameCode',300);
             $table->boolean('national');
             $table->integer('type');
-            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->integer('tournaments_id');
+            $table->foreign('tournaments_id')->references('id')->on('unique_tournamentsses')->onDelete('cascade');
+            $table->integer('seasons_id');
+            $table->foreign('seasons_id')->references('id')->on('seasons')->onDelete('cascade');
             $table->timestamps();
 
         });

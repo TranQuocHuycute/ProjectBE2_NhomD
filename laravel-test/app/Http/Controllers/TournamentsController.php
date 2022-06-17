@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\player;
-use Illuminate\Http\Request;
-use App\Models\Team;
 
-class TeamDetailsController extends Controller
+use App\Models\tournaments;
+use App\Http\Requests\StoretournamentsRequest;
+use App\Http\Requests\UpdatetournamentsRequest;
+
+class TournamentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,19 +15,7 @@ class TeamDetailsController extends Controller
      */
     public function index()
     {
-
-
-
-    }
-    public function getTeam(){
-
-        $obj = new Player();
-        $player = $obj-> get_all_data();
-        $teams = Team::get_all_team ();
-        $teams = Team::join("rows", function ($join) {
-            $join->on("rows.team_id", "=", "teams.id");
-        })->get();
-        return view('teamdetail',['player' => $player],['teams' => $teams]);
+        //
     }
 
     /**
@@ -42,10 +31,10 @@ class TeamDetailsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoretournamentsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoretournamentsRequest $request)
     {
         //
     }
@@ -53,10 +42,10 @@ class TeamDetailsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(tournaments $tournaments)
     {
         //
     }
@@ -64,10 +53,10 @@ class TeamDetailsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(tournaments $tournaments)
     {
         //
     }
@@ -75,11 +64,11 @@ class TeamDetailsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\UpdatetournamentsRequest  $request
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatetournamentsRequest $request, tournaments $tournaments)
     {
         //
     }
@@ -87,10 +76,10 @@ class TeamDetailsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\tournaments  $tournaments
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(tournaments $tournaments)
     {
         //
     }
