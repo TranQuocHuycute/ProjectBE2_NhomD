@@ -1,0 +1,25 @@
+.type-08 .content {
+  background-color: #f1f2f5;
+  height: auto;
+  width: 400px;
+  margin-left: 10px;
+}
+.type-08 .content .avatar {
+  text-align: center;
+}
+.type-08 .content .avatar .gluUez {
+  border-radius: 50%;
+}
+.type-08 .content .full-name {
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+.type-08 .content .infomation>p {
+  margin: 5px 0 5px 20px;
+}
+.type-08 .content .infomation>p .sig-out {
+  margin-left: 20px;
+}
+.type-08 .content .infomation>p .remove {
+  margin-left: 20px;
+}

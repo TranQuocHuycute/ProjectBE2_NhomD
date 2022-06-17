@@ -1,0 +1,12 @@
+.type-21{
+  background-color: papayawhip;
+  position: relative;
+  width: 200px;
+  height: auto;
+}
+.type-21 .container{
+  margin-top: 20px;
+}
+.type-21 .container button{
+  font-size: 1.5rem;
+}
