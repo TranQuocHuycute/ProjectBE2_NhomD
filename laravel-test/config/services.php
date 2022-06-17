@@ -34,6 +34,17 @@ return [
         'client_id' =>'1045113379145',
         'client_secret' => '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',
         'redirect' => 'http://localhost:8000/auth/google/callback',
+        ],
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost/laravel-test/public/login/facebook/callback',
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => 'http://localhost/laravel-test/public/login/github/callback',
     ],
 
 ];
