@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +36,11 @@ class RouteServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+    {   
+        // $player = new DatabaseSeeder();
+        // $player ->run();
+
+        
         $this->configureRateLimiting();
 
         $this->routes(function () {

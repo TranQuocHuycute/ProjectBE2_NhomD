@@ -23,4 +23,5 @@ Route::get('/', function () {
 Route::get('/player', [PlayerController::class,'index']);
 // player
 Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
+Route::DELETE('/playerdetail/delete/{id}', [TeamDetailsController::class,'destroy']);
 

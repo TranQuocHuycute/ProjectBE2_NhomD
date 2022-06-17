@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\player;
+use Database\Seeders\PlayerSeeder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class TeamDetailsController extends Controller
 {
@@ -14,7 +17,7 @@ class TeamDetailsController extends Controller
     public function index()
     {
         
-      
+     
 
     }
     public function getTeam(){
@@ -54,6 +57,8 @@ class TeamDetailsController extends Controller
     public function show($id)
     {
         //
+        $refresh = new PlayerSeeder();
+        $refresh->run();
     }
 
     /**
@@ -76,8 +81,9 @@ class TeamDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -88,5 +94,8 @@ class TeamDetailsController extends Controller
     public function destroy($id)
     {
         //
+        // DB::delete('delete from players where id = ?',[$id]);
+        DB::table('players')->where('id',$id)->delete();
+        return Redirect::action([TeamDetailsController::class, 'getTeam']);
     }
 }

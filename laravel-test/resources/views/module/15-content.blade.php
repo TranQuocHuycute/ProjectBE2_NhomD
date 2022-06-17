@@ -12,7 +12,12 @@
           <path d="M64 448h896v128h-896v-128z"></path>
           <path d="M64 704h896v128h-896v-128z"></path>
         </svg>List view</a>
-        <button type="button"  class="btn btn-primary">refresh</button>
+        <form method="POST" action="/playerdetail/refresh" onsubmit="return ConfirmDelete( this )">
+                    @method('Create')
+                    @csrf
+                    <button type="button"  class="btn btn-primary">refresh</button>
+                </form>
+       
          
       <div width="104.80555725097656" fill="#0057a3" class="sc-94e3615d-0 kFiNEn"></div>
     </div>
@@ -36,9 +41,14 @@
               <div class="sc-8cd91851-5 eIszhL">
                 <div title="F" class="sc-8cd91851-13 hSFyrg">{{ $player->position }}</div>
               </div>
-              <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="{{ $player->flags }}" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div>
+              <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="{{ $player->flags }}" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->country }}</span></div>
             </div>
-            <button type="button"  class="btn btn-danger">delete</button>
+            <form method="POST" action="/playerdetail/delete/{{ $player->id }}" onsubmit="return ConfirmDelete( this )">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+          
           </a>
           
           @endforeach

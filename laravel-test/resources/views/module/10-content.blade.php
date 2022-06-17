@@ -1,13 +1,13 @@
 
 <div class="sc-e5255230-0 hLaBJu">
 	<div class="sc-cd4cfbdc-0 sc-6458077b-0 hDkGff kmlQtX">
-	<div class="sc-6458077b-1 ilVPCU"><img width="100%" height="100%" alt="LaLiga" src="./10/images/Laliga2.png" class="sc-a7ad0435-0 hDIIyr"></div>
+	<div class="sc-6458077b-1 ilVPCU"><img width="100%" height="100%" alt="LaLiga" src="https://api.sofascore.app/api/v1/team/33124/image" class="sc-a7ad0435-0 hDIIyr"></div>
 		<div class="sc-6458077b-5 cYnkGM">
-			<h2 style="color:#f4a32e" class="sc-6458077b-7 hjOEHH">LaLiga</h2>
+			<h2 style="color:#f4a32e" class="sc-6458077b-7 hjOEHH">Hải phòng</h2>
 			<div class="sc-6458077b-6 kIigpv">
 				<div class="sc-6458077b-6 kIigpv">
-					<img width="21" height="21" alt="Spain" src="./10/images/RCD.png" class="sc-a7ad0435-0 border-avatar"><span color="#f4a32e" class="sc-6458077b-9 dccBf">
-						Spain
+					<img width="21" height="21" alt="Spain" src="https://www.sofascore.com/static/images/flags/vn.png" class="sc-a7ad0435-0 border-avatar"><span color="#f4a32e" class="sc-6458077b-9 dccBf">
+						Vietnam
 					</span></div>
 
 			</div>
