@@ -1,12 +1,4 @@
-<?php
-$url_host = 'http://' . $_SERVER['HTTP_HOST'];
-$pattern_document_root = addcslashes(realpath($_SERVER['DOCUMENT_ROOT']), '\\');
-$pattern_uri = '/' . $pattern_document_root . '(.*)$/';
 
-preg_match_all($pattern_uri, __DIR__, $matches);
-
-
-?>
 <div class="player">
   <div class="sc-2829e1d5-0 islOmW ">Players</div>
   <div class="sc-a1617277-0 GsEnK">
@@ -28,6 +20,9 @@ preg_match_all($pattern_uri, __DIR__, $matches);
     <div class="sc-3db02b55-1 eXovkq">
 
       <div class="sc-f27b68e5-0 ia-djTk">
+
+
+
         <div class="sc-2829e1d5-1 kEOano">
           @foreach ($player as $player)
           <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}">

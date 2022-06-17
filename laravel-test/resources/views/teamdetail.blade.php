@@ -25,24 +25,21 @@
 <body>
     <main>
         <header>
-        @include('module/01-content');
+            @include('module/01-content')
         </header>
         <div class="container">
             <div class="matches row">
 
                 <div class="col-7">
-                @include('module/14-content');
-                @include('module/12-content');
-                @include('module/15-content');
-                </div>
+                    @include('module/14-content')
+                    @include('module/12-content')
+                    @include('module/15-content')
 
+                </div>
                 <div class="col-4 ">
                 @include('module/13-content');
                 </div>
-
             </div>
-
-
         </div>
 
     </main>

@@ -3,6 +3,8 @@
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\TeamDetailsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ModuleControler;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/player', [PlayerController::class,'index']);
+// Route::get('/player', [PlayerController::class,'index']);
 // player
-Route::get('/playerdetail', [TeamDetailsController::class,'index']);
+Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
