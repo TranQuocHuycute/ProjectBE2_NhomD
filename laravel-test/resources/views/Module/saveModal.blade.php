@@ -3,7 +3,7 @@
         <div class="modal-content">
 
             <div class="modal-body">
-                {!! Form::open(['method' => 'POST', 'route' => 'category.add']) !!}
+                {!! Form::open(['method' => 'POST', 'route' => 'name.add']) !!}
                 @csrf
                 {!! Form::label('name', 'Description') !!}
                 <div class="mb-3">

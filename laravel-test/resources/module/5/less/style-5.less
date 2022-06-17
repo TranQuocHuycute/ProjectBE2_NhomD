@@ -1,0 +1,98 @@
+@import "../vars.less";
+
+.style-5 {
+    .all_leagues {
+        margin: 5px;
+        padding: 5px;
+
+        .btn_all_leagues {
+            border: none;
+            margin: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            background: rgb(220, 224, 228, .5);
+            text-align: center;
+        }
+
+        .leagues {
+
+            .lb-leagues {
+                width: 100%;
+
+                .parent-leagues {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    padding: 5px;
+                    border-radius: 5px;
+
+                    a {
+                        color: rgb(0, 0, 0, .7);
+                        text-decoration: none;
+
+                        .logo_leagues {
+                            height: 30px;
+                            width: 30px;
+                            float: left;
+                            margin: 5px;
+
+                            img {
+                                border-radius: 100%;
+                            }
+                        }
+
+                        .name_leagues {
+                            margin: 5px;
+                            padding: 5px;
+                            font-size: smaller;
+                        }
+                    }
+                }
+
+                .parent-leagues:hover {
+                    background: rgb(229, 232, 235, .4);
+
+                    a {
+                        color: #278adb;
+                    }
+                }
+            }
+
+            .lb-leagues:hover {
+                cursor: pointer;
+            }
+
+            .cb-leagues {
+                display: none;
+            }
+
+            .cb-leagues:checked~.list-leagues {
+                display: none;
+            }
+
+            .list-leagues {
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+
+                .leagues {
+                    a {
+                        color: rgb(0, 0, 0, .7);
+                        text-decoration: none;
+
+                        .name_leagues {
+                            margin: 5px;
+                            padding: 5px;
+                            font-size: smaller;
+                        }
+                    }
+                }
+
+                .leagues:hover {
+                    a {
+                        color: #278adb;
+                    }
+                }
+            }
+        }
+    }
+}
