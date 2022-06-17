@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddGoogleIdColumn extends Migration
+class AddSocialLoginField extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddGoogleIdColumn extends Migration
      */
     public function up()
     {
+        //
         Schema::table('users', function ($table) {
-            $table->string('google_id')->nullable();
+            $table->string('social_id')->nullable();
+            $table->string('social_type')->nullable();
         });
     }
 
@@ -26,5 +28,9 @@ class AddGoogleIdColumn extends Migration
     public function down()
     {
         //
+        Schema::table('users', function ($table) {
+            $table->dropColumn('social_id');
+            $table->dropColumn('social_type');
+        });
     }
 }

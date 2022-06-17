@@ -23,7 +23,7 @@ class category extends Model
 
    static function get_all_data()
    {
-      return DB::table('categories')->get();
+      return DB::table('categories')->orderBy('name')->get();
    }
    static function insert($data)
    {
