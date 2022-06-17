@@ -1,15 +1,4 @@
 
-<?php
-$url_host = 'http://' . $_SERVER['HTTP_HOST'];
-$pattern_document_root = addcslashes(realpath($_SERVER['DOCUMENT_ROOT']), '\\');
-$pattern_uri = '/' . $pattern_document_root . '(.*)$/';
-
-preg_match_all($pattern_uri, __DIR__, $matches);
-
-?>
-
-
-<body>
     <div class="type-02">
         <div class="container">
             <div class="row">
@@ -21,7 +10,6 @@ preg_match_all($pattern_uri, __DIR__, $matches);
                     <h5>Search</h5>
                         <input class="search">
                             <button type="button" class="search-icon"><i class="bi bi-search"></i></button>
-                        </input>
                     <div class="row">
                         <div class="col-6 tops">
                             <h5>Tops live scores and streaming</h5>
@@ -123,6 +111,3 @@ preg_match_all($pattern_uri, __DIR__, $matches);
             <a href="#" class="link">SofaScore LiveScore App&nbsp;›</a>
         </div>
     </div>
-    
-</body>
-</html>
