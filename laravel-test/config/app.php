@@ -174,7 +174,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -233,6 +235,8 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
