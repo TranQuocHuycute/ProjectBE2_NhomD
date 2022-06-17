@@ -6,37 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css -->
-
+    <link rel="stylesheet" type="text/css" href="{{ url('css/01.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/02.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/13.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/14.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/15.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/bootstrap.min.css') }}">
     <title>Document</title>
 </head>
 
 <body>
     <main>
         <header>
-            @include('module01')
+            @include('module/01-content')
         </header>
         <div class="container">
             <div class="matches row">
 
                 <div class="col-7">
-                    @include('module14')
-                    @include('module12')
-                    @include('module15')
-                </div>
+                    @include('module/14-content')
+                    @include('module/12-content')
+                    @include('module/15-content')
 
+                </div>
                 <div class="col-4 ">
-                    @include('module13')
+                    @include('module/13-content')
                 </div>
-
             </div>
-
-
         </div>
 
     </main>
 
     <footer>
-        @include('module02')
+        @include('module/02-content')
     </footer>
 
     @section('scripts')
