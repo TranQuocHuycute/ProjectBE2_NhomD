@@ -20,7 +20,7 @@ use App\Http\Controllers\ModuleControler;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/player', [PlayerController::class,'index']);
+Route::get('/player', [PlayerController::class,'index']);
 // player
 Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 

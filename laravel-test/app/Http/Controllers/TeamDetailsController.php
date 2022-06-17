@@ -13,15 +13,15 @@ class TeamDetailsController extends Controller
      */
     public function index()
     {
-        //
-        // $obj = new Player();
-        // $player = $obj-> get_all_data();
-
+        
+      
 
     }
     public function getTeam(){
 
-        return view('teamdetail');
+        $obj = new Player();
+        $player = $obj-> get_all_data();
+        return view('teamdetail',['player' => $player]);
     }
 
     /**
