@@ -32,8 +32,6 @@
                     @include('module/14-content')
                     @include('module/11-content')
                     @include('module/15-content')
-
-
                 </div>
                 <div class="col-4 ">
 
@@ -48,9 +46,7 @@
     <br>
     <br>
     <br>
-
     <footer>
-
         @include('module/02-content')
 
     </footer>
