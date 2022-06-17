@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorecategoryRequest;
 use App\Http\Requests\UpdatecategoryRequest;
 use App\Models\category;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -17,7 +18,7 @@ class CategoryController extends Controller
     {
         //
         $categories = category::get_all_data();
-        return view("/module/21-content",["categories"=>$categories]);
+        return view("/module/21-content", ["categories" => $categories]);
     }
 
     /**
@@ -25,9 +26,19 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required',
+            'priority' => 'required',
+            'flag' => 'required',
+            'alpha2' => 'required',
+        ]);
+        
+        $data = $request->all();
+        category::insert($data);
+        return redirect("home")->withSuccess('created');
     }
 
     /**

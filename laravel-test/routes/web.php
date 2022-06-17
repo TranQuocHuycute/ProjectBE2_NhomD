@@ -28,7 +28,7 @@ use App\Http\Controllers\ModuleControler;
 Route::get('/home', [CategoryController::class,"index"]);
 //Route::get('/login', [LoginController::class,"login"]);
 
-
+Route::post('add', [CategoryController::class,"add"])->name("name.add");
 Route::get('auth/google', [UserController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [UserController::class, 'handleGoogleCallback']);
 
