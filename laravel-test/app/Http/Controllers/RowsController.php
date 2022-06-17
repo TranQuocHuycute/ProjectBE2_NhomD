@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\player;
-use App\Models\Rows;
-use Illuminate\Http\Request;
-use App\Models\Team;
 
-class TeamDetailsController extends Controller
+use App\Models\Rows;
+use App\Http\Requests\StoreRowsRequest;
+use App\Http\Requests\UpdateRowsRequest;
+
+class RowsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,23 +15,7 @@ class TeamDetailsController extends Controller
      */
     public function index()
     {
-
-// '
-// SELECT DISTINCT teams.name FROM `rows` INNER JOIN teams ON rows.team_id = teams.id WHERE teams.tournaments_id = 626
-// '
-
-    }
-    public function getTeam(){
-
-
-        $obj = new Player();
-        $player = $obj-> get_all_data();
-        // $teams = Team::get_all_team ();
-        $rows = Rows::join('teams', 'rows.team_id', '=', 'teams.id')
-        ->where('teams.tournaments_id',626)->distinct()
-        ->get(['teams.*', 'teams.name']);
-
-        return view('teamdetail',['player' => $player],['rows' => $rows]);
+        //
     }
 
     /**
@@ -47,10 +31,10 @@ class TeamDetailsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreRowsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRowsRequest $request)
     {
         //
     }
@@ -58,10 +42,10 @@ class TeamDetailsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rows  $rows
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Rows $rows)
     {
         //
     }
@@ -69,10 +53,10 @@ class TeamDetailsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rows  $rows
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Rows $rows)
     {
         //
     }
@@ -80,11 +64,11 @@ class TeamDetailsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\UpdateRowsRequest  $request
+     * @param  \App\Models\Rows  $rows
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRowsRequest $request, Rows $rows)
     {
         //
     }
@@ -92,10 +76,10 @@ class TeamDetailsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Rows  $rows
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Rows $rows)
     {
         //
     }

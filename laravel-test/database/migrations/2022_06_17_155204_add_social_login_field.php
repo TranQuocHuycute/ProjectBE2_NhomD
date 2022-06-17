@@ -27,6 +27,7 @@ class AddSocialLoginField extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('users');
         //
         Schema::table('users', function ($table) {
             $table->dropColumn('social_id');

@@ -29,8 +29,6 @@ class PlayerSeeder extends Seeder
                 'position' => $player->player->position,
                 'userCount' => $player->player->userCount,
                
-
-
             ]);
         }
     }

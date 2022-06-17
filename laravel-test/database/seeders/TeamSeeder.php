@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\seasons;
+use Exception;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,26 +16,39 @@ class TeamSeeder extends Seeder
      */
     public function run()
     {
-        $urlCategories = 'https://api.sofascore.com/api/v1/unique-tournament/626/season/40370/standings/total';
-        $categories = file_get_contents($urlCategories);
+        foreach (seasons::all() as $seasion) {
 
-        $categories = json_decode($categories);
+            $urlRows = 'https://api.sofascore.com/api/v1/unique-tournament/' . $seasion->tournaments_id . '/season/' . $seasion->id . '/standings/total';
+            try {
+                $_rows  = file_get_contents($urlRows);
 
-
-
-        foreach ($categories->standings[0]->rows as $index => $team) {
-
-            DB::table('teams')->insert([
-                'id' => $team->team->id,
-                'name' => $team->team->name,
-                'slug' => $team->team->slug,
-                'shortName' => $team->team->shortName,
-                'gender' => $team->team->gender,
-                'userCount' => $team->team->userCount,
-                'nameCode'=>$team->team->nameCode,
-                'national' => $team->team->national,
-                'type' => $team->team->type,
-            ]);
+                $rows  = json_decode($_rows);
+                if (!!$rows) {
+                    foreach ($rows->standings as $standing) {
+                        foreach ($standing->rows as $row) {
+                            try {
+                                DB::table('teams')->insert([
+                                    'id' => $row->team->id,
+                                    'name' => $row->team->name,
+                                    'shortName' => $row->team->shortName,
+                                    'gender' => $row->team->gender,
+                                    'userCount' => $row->team->userCount,
+                                    'nameCode' => $row->team->nameCode,
+                                    'national' => $row->team->national,
+                                    'type' => $row->team->type,
+                                    'tournaments_id' => $seasion->tournaments_id,
+                                    'seasons_id' => $seasion->id,
+                                    'slug' => $row->team->slug
+                                ]);
+                            } catch (Exception $e) {
+                                continue;
+                            }
+                        }
+                    }
+                }
+            } catch (Exception $e) {
+                continue;
+            }
         }
     }
 }
