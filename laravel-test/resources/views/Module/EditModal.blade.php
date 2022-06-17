@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./css/02.css">
 <div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -35,4 +36,4 @@
             </div>
         </div>
     </div>
-    </div>
+</div>

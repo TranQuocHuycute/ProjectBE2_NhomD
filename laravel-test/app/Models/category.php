@@ -36,4 +36,14 @@ class category extends Model
          'alpha2' => $data['alpha2']
       ]);
    }
+
+   static function edit($data)
+   {
+      $now = new DateTime();
+      self::whereId($data['id'])->update($data);
+   }
+
+   static function destroy($id){
+      self::find($id)->delete();
+   }
 }

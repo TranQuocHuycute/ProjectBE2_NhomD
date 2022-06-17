@@ -40,7 +40,7 @@ Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 // player
 //Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
-Route::get('/home', [CategoryController::class,"index"]);
+Route::get('/home', [CategoryController::class,"index"])->name("home");
 //Route::get('/login', [LoginController::class,"login"]);
 
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
@@ -70,7 +70,7 @@ Route::get('send-mail', [SendMailController::class, 'sendMail']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // LOGIN FACEBOOK
 Route::get('login/facebook', [LoginController::class, 'redirectToFacebook'])->name('login.facebook');
