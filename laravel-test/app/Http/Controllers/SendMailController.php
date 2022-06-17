@@ -8,12 +8,11 @@ use Illuminate\Support\Facades\Mail;
 
 class SendMailController extends Controller
 {
-    public function sendMail()
+    public static function sendMail($message)
     {
-        $user = 'baocuns';
-        $mailable = new SendMail($user);
-        Mail::to("baonv.23.student@fit.tdc.edu.vn")
-            ->cc("baonguyen2001aa@gmail.com")
+        $user = auth()->user();
+        $mailable = new SendMail($user, $message);
+        Mail::to($user->email)
             ->queue($mailable);
         return true;
     }
