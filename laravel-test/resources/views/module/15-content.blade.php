@@ -20,15 +20,14 @@ preg_match_all($pattern_uri, __DIR__, $matches);
           <path d="M64 448h896v128h-896v-128z"></path>
           <path d="M64 704h896v128h-896v-128z"></path>
         </svg>List view</a>
+        <button type="button"  class="btn btn-primary">refresh</button>
+         
       <div width="104.80555725097656" fill="#0057a3" class="sc-94e3615d-0 kFiNEn"></div>
     </div>
 
     <div class="sc-3db02b55-1 eXovkq">
 
       <div class="sc-f27b68e5-0 ia-djTk">
-
-
-
         <div class="sc-2829e1d5-1 kEOano">
           @foreach ($player as $player)
           <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}">
@@ -44,9 +43,9 @@ preg_match_all($pattern_uri, __DIR__, $matches);
               </div>
               <div class="sc-8cd91851-14 clDCDf"><img width="18" height="18" alt="FR" src="https://www.sofascore.com/static/images/flags/fr.png" class="sc-a7ad0435-0 gluUez sc-8cd91851-8 cHySUE"><span class="sc-8cd91851-9 jbHIoF">{{ $player->shortName }}</span></div>
             </div>
+            <button type="button"  class="btn btn-danger">delete</button>
           </a>
-
-
+          
           @endforeach
 
         </div>
