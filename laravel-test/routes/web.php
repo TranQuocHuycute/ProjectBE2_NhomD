@@ -25,10 +25,13 @@ use App\Http\Controllers\ModuleControler;
 // player
 //Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
-Route::get('/home', [CategoryController::class,"index"]);
+Route::get('/home', [CategoryController::class,"index"])->name('home');
 //Route::get('/login', [LoginController::class,"login"]);
 
-Route::post('add', [CategoryController::class,"add"])->name("name.add");
+Route::post('add', [CategoryController::class,"add"])->name("category.add");
+Route::get('edit/{id}', [CategoryController::class,"edit"])->name("category.edit");
+Route::get('remove/{id}', [CategoryController::class,"delete"])->name("category.delete");
+Route::post('edit-category', [CategoryController::class,"update"])->name("category.update");
 Route::get('auth/google', [UserController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [UserController::class, 'handleGoogleCallback']);
 

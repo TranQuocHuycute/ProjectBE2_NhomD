@@ -18,7 +18,7 @@ class CategoryController extends Controller
     {
         //
         $categories = category::get_all_data();
-        return view("/module/21-content", ["categories" => $categories]);
+        return view("home", ["categories" => $categories]);
     }
 
     /**
@@ -38,7 +38,7 @@ class CategoryController extends Controller
         
         $data = $request->all();
         category::insert($data);
-        return redirect("home")->withSuccess('created');
+        return redirect("home")->with('status', 'created');
     }
 
     /**
@@ -69,9 +69,11 @@ class CategoryController extends Controller
      * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(category $category)
+    public function edit($id)
     {
         //
+        $category = category::find($id);;
+        return view('module/edit-category',['category'=>$category]);
     }
 
     /**
@@ -81,9 +83,21 @@ class CategoryController extends Controller
      * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatecategoryRequest $request, category $category)
+    public function update(UpdatecategoryRequest $request)
     {
-        //
+        $request->validate([
+            'id'=>'required',
+            'name' => 'required',
+            'slug' => 'required',
+            'priority' => 'required',
+            'flag' => 'required',
+            'alpha2' => 'required',
+        ]);
+        
+        $data = $request->all();
+        unset($data['_token']);
+        category::edit($data);
+        return redirect(route("home"))->with('status', 'updated');
     }
 
     /**
@@ -95,5 +109,9 @@ class CategoryController extends Controller
     public function destroy(category $category)
     {
         //
+    }
+    public function delete($id){
+        category::destroy($id);
+        return redirect(route("home"))->with('status', 'deleted');
     }
 }

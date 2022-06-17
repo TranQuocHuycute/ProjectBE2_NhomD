@@ -2,37 +2,43 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form>
+                {!! Form::open(['method' => 'POST', 'route' => 'name.add']) !!}
+                @csrf
+                {!! Form::label('name', 'Description') !!}
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">ID</label>
-                    <input type="text" class="form-control" value="2" id="id" disabled>
+                    {!! Form::label('name', 'Id') !!}
+                    {{ Form::text('name', $category->id, array_merge(['class' => 'form-control']))}}
                 </div>
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Name</label>
-                    <input type="text" class="form-control" id="name">
+                    {!! Form::label('name', 'Name') !!}
+                    {{ Form::text('name', '', array_merge(['class' => 'form-control'])) }}
+                    
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug">
+                    {!! Form::label('name', 'Slug') !!}
+                    {{ Form::text('slug', '', array_merge(['class' => 'form-control'])) }}
+                    
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Priority</label>
-                    <input type="text" class="form-control" id="priority">
+                    {!! Form::label('name', 'Priority') !!}
+                    {{ Form::text('priority', '', array_merge(['class' => 'form-control'])) }}
+                    
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Flag</label>
-                    <input type="text" class="form-control" id="flag">
+                    {!! Form::label('name', 'Flag') !!}
+                    {{ Form::text('flag', '', array_merge(['class' => 'form-control'])) }}
+                    
                 </div>
                 <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Alpha</label>
-                    <input type="text" class="form-control" id="alpha">
+                    {!! Form::label('name', 'Alpha') !!}
+                    {{ Form::text('alpha2', '', array_merge(['class' => 'form-control'])) }}
+                    
                 </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <div class="modal-footer">
+                    {!! Form::button('Close', ['class' => 'btn btn-secondary', 'data-bs-dismiss' => 'modal']) !!}
+                    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+                </div>
+                {!! Form::close() !!}
             </div>
         </div>
-    </div>
     </div>
