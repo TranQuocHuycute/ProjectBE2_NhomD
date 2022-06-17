@@ -28,12 +28,14 @@ class category extends Model
    static function insert($data)
    {
       $now = new DateTime();
-      self::create([
-         'name' => $data['name'],
-         'slug' => $data['slug'],
-         'priority' => $data['priority'],
-         'flag' => $data['flag'],
-         'alpha2' => $data['alpha2']
-      ]);
+      self::create($data);
+   }
+   static function edit($data)
+   {
+      $now = new DateTime();
+      self::whereId($data['id'])->update($data);
+   }
+   static function destroy($id){
+      self::find($id)->delete();
    }
 }

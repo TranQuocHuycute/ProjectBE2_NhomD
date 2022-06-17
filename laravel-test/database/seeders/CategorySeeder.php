@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
         $categories = json_decode($categories);
         foreach ($categories->categories as $index => $category) {
             if(isset($category-> alpha2)){
-                FacadesDB::table('categories')->insert([
+                \App\Models\category::insert([
                     'name' => $category-> name ,
                     'slug' => $category-> slug ,
                     'priority' => $category-> priority ,
@@ -29,7 +29,7 @@ class CategorySeeder extends Seeder
                 ]);
             }
             else{
-                FacadesDB::table('categories')->insert([
+                \App\Models\category::insert([
                     'name' => $category-> name ,
                     'slug' => $category-> slug ,
                     'priority' => $category-> priority ,
