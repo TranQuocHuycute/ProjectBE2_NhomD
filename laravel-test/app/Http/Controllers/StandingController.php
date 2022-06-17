@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\team;
-use Illuminate\Http\Request;
+use App\Models\Standing;
+use App\Http\Requests\StoreStandingRequest;
+use App\Http\Requests\UpdateStandingRequest;
 
-class TeamController extends Controller
+class StandingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -30,10 +31,10 @@ class TeamController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreStandingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreStandingRequest $request)
     {
         //
     }
@@ -41,10 +42,10 @@ class TeamController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\team  $team
+     * @param  \App\Models\Standing  $standing
      * @return \Illuminate\Http\Response
      */
-    public function show(team $team)
+    public function show(Standing $standing)
     {
         //
     }
@@ -52,10 +53,10 @@ class TeamController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\team  $team
+     * @param  \App\Models\Standing  $standing
      * @return \Illuminate\Http\Response
      */
-    public function edit(team $team)
+    public function edit(Standing $standing)
     {
         //
     }
@@ -63,11 +64,11 @@ class TeamController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\team  $team
+     * @param  \App\Http\Requests\UpdateStandingRequest  $request
+     * @param  \App\Models\Standing  $standing
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, team $team)
+    public function update(UpdateStandingRequest $request, Standing $standing)
     {
         //
     }
@@ -75,10 +76,10 @@ class TeamController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\team  $team
+     * @param  \App\Models\Standing  $standing
      * @return \Illuminate\Http\Response
      */
-    public function destroy(team $team)
+    public function destroy(Standing $standing)
     {
         //
     }

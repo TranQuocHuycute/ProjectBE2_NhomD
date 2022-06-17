@@ -33,7 +33,6 @@ class TeamSeeder extends Seeder
                 'nameCode'=>$team->team->nameCode,
                 'national' => $team->team->national,
                 'type' => $team->team->type,
-
             ]);
         }
     }

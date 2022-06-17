@@ -1,0 +1,43 @@
+@import "../vars.less";
+.style-4 .top_leagues {
+  margin: 5px;
+  padding: 5px;
+}
+.style-4 .top_leagues .btn_top_leagues {
+  border: none;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(220,224,228,0.5);
+  text-align: center;
+}
+.style-4 .top_leagues .list_leagues {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.style-4 .top_leagues .list_leagues a {
+  color: rgba(0,0,0,0.7);
+  text-decoration: none;
+}
+.style-4 .top_leagues .list_leagues a .logo_leagues {
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin: 5px;
+}
+.style-4 .top_leagues .list_leagues a .logo_leagues img {
+  border-radius: 100%;
+}
+.style-4 .top_leagues .list_leagues a .name_leagues {
+  margin: 5px;
+  padding: 5px;
+  font-size: smaller;
+}
+.style-4 .top_leagues .list_leagues:hover {
+  background: rgba(229,232,235,0.2);
+}
+.style-4 .top_leagues .list_leagues:hover a {
+  color: #278adb;
+}

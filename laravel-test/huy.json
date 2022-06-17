@@ -1,0 +1,498 @@
+{
+    "standings": [
+        {
+            "tournament": {
+                "name": "V-League",
+                "slug": "v-league",
+                "category": {
+                    "name": "Vietnam",
+                    "slug": "vietnam",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 366,
+                    "flag": "vietnam",
+                    "alpha2": "VN"
+                },
+                "uniqueTournament": {
+                    "name": "V-League",
+                    "slug": "v-league",
+                    "category": {
+                        "name": "Vietnam",
+                        "slug": "vietnam",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "id": 366,
+                        "flag": "vietnam",
+                        "alpha2": "VN"
+                    },
+                    "userCount": 2787,
+                    "id": 626
+                },
+                "priority": 0,
+                "id": 4104
+            },
+            "type": "total",
+            "name": "V-League",
+            "descriptions": [],
+            "tieBreakingRule": {
+                "text": "In the event that two (or more) teams have an equal number of points, the following rules break the tie during the season: 1. Goal difference 2. Goals scored At the end of the season, the following tie-breaking procedures are used: 1. Head-to-head 2. Goal difference 3. Goals scored",
+                "id": 4
+            },
+            "rows": [
+                {
+                    "team": {
+                        "name": "Hải Phòng",
+                        "slug": "hai-phong",
+                        "shortName": "Hải Phòng",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 965,
+                        "nameCode": "HPH",
+                        "national": false,
+                        "type": 0,
+                        "id": 33124,
+                        "teamColors": {
+                            "primary": "#dd0000",
+                            "secondary": "#ffd700",
+                            "text": "#ffd700"
+                        }
+                    },
+                    "descriptions": [],
+                    "promotion": {
+                        "text": "Champions League",
+                        "id": 804
+                    },
+                    "position": 1,
+                    "matches": 4,
+                    "wins": 2,
+                    "losses": 0,
+                    "draws": 2,
+                    "scoresFor": 6,
+                    "scoresAgainst": 4,
+                    "points": 8,
+                    "id": 678253
+                },
+                {
+                    "team": {
+                        "name": "Viettel",
+                        "slug": "viettel",
+                        "shortName": "Viettel",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 2774,
+                        "nameCode": "VIE",
+                        "disabled": false,
+                        "national": false,
+                        "type": 0,
+                        "id": 231270,
+                        "teamColors": {
+                            "primary": "#dd0000",
+                            "secondary": "#ffffff",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "descriptions": [],
+                    "promotion": {
+                        "text": "Champions League Qualification",
+                        "id": 24
+                    },
+                    "position": 2,
+                    "matches": 4,
+                    "wins": 2,
+                    "losses": 1,
+                    "draws": 1,
+                    "scoresFor": 6,
+                    "scoresAgainst": 3,
+                    "points": 7,
+                    "id": 678262
+                },
+                {
+                    "team": {
+                        "name": "Sông Lam Nghệ An",
+                        "slug": "song-lam-nghe-an",
+                        "shortName": "Nghệ An",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 750,
+                        "nameCode": "SLN",
+                        "national": false,
+                        "type": 0,
+                        "id": 33129,
+                        "teamColors": {
+                            "primary": "#ffde00",
+                            "secondary": "#059746",
+                            "text": "#059746"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 3,
+                    "matches": 4,
+                    "wins": 2,
+                    "losses": 1,
+                    "draws": 1,
+                    "scoresFor": 5,
+                    "scoresAgainst": 3,
+                    "points": 7,
+                    "id": 678261
+                },
+                {
+                    "team": {
+                        "name": "Hà Nội",
+                        "slug": "ha-noi",
+                        "shortName": "Hà Nội",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 3293,
+                        "nameCode": "HAN",
+                        "national": false,
+                        "type": 0,
+                        "id": 33130,
+                        "teamColors": {
+                            "primary": "#ffff00",
+                            "secondary": "#000000",
+                            "text": "#000000"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 4,
+                    "matches": 3,
+                    "wins": 2,
+                    "losses": 0,
+                    "draws": 1,
+                    "scoresFor": 2,
+                    "scoresAgainst": 0,
+                    "points": 7,
+                    "id": 678254
+                },
+                {
+                    "team": {
+                        "name": "Bình Định",
+                        "slug": "binh-dinh",
+                        "shortName": "Bình Định",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 458,
+                        "nameCode": "SBD",
+                        "disabled": false,
+                        "national": false,
+                        "type": 0,
+                        "id": 40025,
+                        "teamColors": {
+                            "primary": "#ff0000",
+                            "secondary": "#0000ff",
+                            "text": "#0000ff"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 5,
+                    "matches": 3,
+                    "wins": 2,
+                    "losses": 1,
+                    "draws": 0,
+                    "scoresFor": 5,
+                    "scoresAgainst": 4,
+                    "points": 6,
+                    "id": 678251
+                },
+                {
+                    "team": {
+                        "name": "Becamex Bình Dương",
+                        "slug": "becamex-binh-duong",
+                        "shortName": "Becamex Bình Dương",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 692,
+                        "nameCode": "BDU",
+                        "disabled": false,
+                        "national": false,
+                        "type": 0,
+                        "id": 33119,
+                        "teamColors": {
+                            "primary": "#ee2200",
+                            "secondary": "#023faf",
+                            "text": "#023faf"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 6,
+                    "matches": 4,
+                    "wins": 1,
+                    "losses": 1,
+                    "draws": 2,
+                    "scoresFor": 4,
+                    "scoresAgainst": 4,
+                    "points": 5,
+                    "id": 678250
+                },
+                {
+                    "team": {
+                        "name": "Đông Á Thanh Hóa",
+                        "slug": "dong-a-thanh-hoa",
+                        "shortName": "Thanh Hóa",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 553,
+                        "nameCode": "THO",
+                        "national": false,
+                        "type": 0,
+                        "id": 33030,
+                        "teamColors": {
+                            "primary": "#f8e100",
+                            "secondary": "#0000ff",
+                            "text": "#0000ff"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 7,
+                    "matches": 4,
+                    "wins": 1,
+                    "losses": 2,
+                    "draws": 1,
+                    "scoresFor": 4,
+                    "scoresAgainst": 3,
+                    "points": 4,
+                    "id": 678252
+                },
+                {
+                    "team": {
+                        "name": "Hồ Chí Minh City",
+                        "slug": "ho-chi-minh-city",
+                        "shortName": "Hồ Chí Minh",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 859,
+                        "nameCode": "HCM",
+                        "disabled": false,
+                        "national": false,
+                        "type": 0,
+                        "id": 33120,
+                        "teamColors": {
+                            "primary": "#e80c06",
+                            "secondary": "#ffffff",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 8,
+                    "matches": 3,
+                    "wins": 0,
+                    "losses": 0,
+                    "draws": 3,
+                    "scoresFor": 1,
+                    "scoresAgainst": 1,
+                    "points": 3,
+                    "id": 678255
+                },
+                {
+                    "team": {
+                        "name": "Hoàng Anh Gia Lai",
+                        "slug": "hoang-anh-gia-lai",
+                        "shortName": "Gia Lai",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 2761,
+                        "nameCode": "HAG",
+                        "national": false,
+                        "type": 0,
+                        "id": 33125,
+                        "teamColors": {
+                            "primary": "#ffffff",
+                            "secondary": "#059746",
+                            "text": "#059746"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 9,
+                    "matches": 4,
+                    "wins": 0,
+                    "losses": 1,
+                    "draws": 3,
+                    "scoresFor": 2,
+                    "scoresAgainst": 4,
+                    "points": 3,
+                    "id": 678256
+                },
+                {
+                    "team": {
+                        "name": "SHB Đà Nẵng",
+                        "slug": "shb-dja-nang",
+                        "shortName": "Đà Nẵng",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 678,
+                        "nameCode": "DNA",
+                        "national": false,
+                        "type": 0,
+                        "id": 33121,
+                        "teamColors": {
+                            "primary": "#ff4500",
+                            "secondary": "#ffffff",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 10,
+                    "matches": 4,
+                    "wins": 0,
+                    "losses": 1,
+                    "draws": 3,
+                    "scoresFor": 3,
+                    "scoresAgainst": 6,
+                    "points": 3,
+                    "id": 678260
+                },
+                {
+                    "team": {
+                        "name": "Sài Gòn",
+                        "slug": "sai-gon",
+                        "shortName": "Sài Gòn",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 625,
+                        "nameCode": "SAI",
+                        "national": false,
+                        "type": 0,
+                        "id": 62568,
+                        "teamColors": {
+                            "primary": "#ff1493",
+                            "secondary": "#27569f",
+                            "text": "#27569f"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 11,
+                    "matches": 3,
+                    "wins": 0,
+                    "losses": 1,
+                    "draws": 2,
+                    "scoresFor": 3,
+                    "scoresAgainst": 5,
+                    "points": 2,
+                    "id": 678259
+                },
+                {
+                    "team": {
+                        "name": "Hồng Lĩnh Hà Tĩnh",
+                        "slug": "hong-linh-ha-tinh",
+                        "shortName": "Hà Tĩnh",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 496,
+                        "nameCode": "HLH",
+                        "national": false,
+                        "type": 0,
+                        "id": 309496,
+                        "teamColors": {
+                            "primary": "#403896",
+                            "secondary": "#ffffff",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "descriptions": [],
+                    "position": 12,
+                    "matches": 4,
+                    "wins": 0,
+                    "losses": 2,
+                    "draws": 2,
+                    "scoresFor": 2,
+                    "scoresAgainst": 5,
+                    "points": 2,
+                    "id": 678257
+                },
+                {
+                    "team": {
+                        "name": "Nam Định",
+                        "slug": "nam-djinh",
+                        "shortName": "Nam Định",
+                        "gender": "M",
+                        "sport": {
+                            "name": "Football",
+                            "slug": "football",
+                            "id": 1
+                        },
+                        "userCount": 551,
+                        "nameCode": "NDI",
+                        "national": false,
+                        "type": 0,
+                        "id": 33127,
+                        "teamColors": {
+                            "primary": "#ffff00",
+                            "secondary": "#ff0000",
+                            "text": "#ff0000"
+                        }
+                    },
+                    "descriptions": [],
+                    "promotion": {
+                        "text": "Relegation",
+                        "id": 3
+                    },
+                    "position": 13,
+                    "matches": 2,
+                    "wins": 0,
+                    "losses": 1,
+                    "draws": 1,
+                    "scoresFor": 1,
+                    "scoresAgainst": 2,
+                    "points": 1,
+                    "id": 678258
+                }
+            ],
+            "id": 83586,
+            "updatedAtTimestamp": 1645790342
+        }
+    ]
+}

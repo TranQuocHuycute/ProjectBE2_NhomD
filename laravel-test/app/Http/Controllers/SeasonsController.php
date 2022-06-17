@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\seasons;
+use App\Http\Requests\StoreseasonsRequest;
+use App\Http\Requests\UpdateseasonsRequest;
 
-class CategoryController extends Controller
+class SeasonsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCategoryRequest  $request
+     * @param  \App\Http\Requests\StoreseasonsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreseasonsRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\seasons  $seasons
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(seasons $seasons)
     {
         //
     }
@@ -53,10 +53,10 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\seasons  $seasons
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(seasons $seasons)
     {
         //
     }
@@ -64,11 +64,11 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCategoryRequest  $request
-     * @param  \App\Models\Category  $category
+     * @param  \App\Http\Requests\UpdateseasonsRequest  $request
+     * @param  \App\Models\seasons  $seasons
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateseasonsRequest $request, seasons $seasons)
     {
         //
     }
@@ -76,10 +76,10 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\seasons  $seasons
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(seasons $seasons)
     {
         //
     }
