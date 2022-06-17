@@ -20,7 +20,7 @@ class CreateTournamentsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('category');
-            $table->integer('version');
+            $table->integer('version')->default(0);
 
             $table->timestamps();
         });
