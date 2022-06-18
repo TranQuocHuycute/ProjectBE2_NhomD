@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\category;
+use App\Models\uniqueTournament;
+use App\Models\uniqueTournamentss;
+use Exception;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class SeasonsSeeder extends Seeder
 {
@@ -14,20 +19,28 @@ class SeasonsSeeder extends Seeder
      */
     public function run()
     {
-        $urlCategories = 'https://api.sofascore.com/api/v1/team/44/standings/seasons';
-        $categories = file_get_contents($urlCategories);
-
-        $categories = json_decode($categories);
-
-
-        // var_dump($categories) ; die;
-        foreach ($categories->tournamentSeasons[0]->seasons as $index => $seasons) {
-
-            DB::table('seasons')->insert([
-                'id' => $seasons->id,
-                'name' => $seasons->name,
-                'year' => $seasons->year,
-            ]);
+        foreach (uniqueTournamentss::all() as $tournaments) {
+            try {
+                $urlSeasion = 'https://api.sofascore.com/api/v1/unique-tournament/' . $tournaments->id . '/seasons';
+                $seasions  = file_get_contents($urlSeasion);
+                if (!!$seasions) {
+                    $seasions  = json_decode($seasions);
+                    foreach ($seasions->seasons as $seasion) {
+                        try {
+                            DB::table('seasons')->insert([
+                                'id' => $seasion->id,
+                                'name' => $seasion->name,
+                                'year' => $seasion->year,
+                                'tournaments_id' => $tournaments->id
+                            ]);
+                        } catch (Exception $e) {
+                            continue;
+                        }
+                    }
+                }
+            } catch (Exception $e) {
+                continue;
+            }
         }
     }
 }

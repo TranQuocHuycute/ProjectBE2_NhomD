@@ -8,7 +8,8 @@ use Database\Seeders\PlayerSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
-
+use App\Models\Team;
+use App\Models\Rows;
 class TeamDetailsController extends Controller
 {
     /**
@@ -18,13 +19,32 @@ class TeamDetailsController extends Controller
      */
     public function index()
     {
+
     }
     public function getTeam()
     {
 
+
         $obj = new Player();
-        $player = $obj->get_all_data();
-        return view('teamdetail', ['player' => $player]);
+        $player = $obj-> get_all_data();
+        // $teams = Team::get_all_team ();
+        $rows = Rows::join('teams', 'rows.team_id', '=', 'teams.id')
+        ->where('teams.tournaments_id',626)->distinct()
+        ->get(['teams.*', 'teams.name','teams.id']);
+
+        return view('teamdetail',['player' => $player],['rows' => $rows]);
+    }
+
+     /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function delete($id)
+    {
+        Rows::destroy($id);
+        return redirect(route("playerdetail"));
     }
 
     /**
@@ -54,7 +74,7 @@ class TeamDetailsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($request)
+    public function show($id)
     {
         //
 
@@ -91,18 +111,16 @@ class TeamDetailsController extends Controller
         $player->player->update();
     }
 
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
         // DB::delete('delete from players where id = ?',[$id]);
-        DB::table('players')->where('id', $id)->delete();
+        DB::table('players')->where('id',$id)->delete();
         return Redirect::action([TeamDetailsController::class, 'getTeam']);
     }
-}
+
+        //
+    }
+
+   
+

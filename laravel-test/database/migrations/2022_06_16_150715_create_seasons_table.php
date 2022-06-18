@@ -14,9 +14,11 @@ class CreateSeasonsTable extends Migration
     public function up()
     {
         Schema::create('seasons', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id');
             $table->string('name');
             $table->string('year');
+            $table->integer('tournaments_id');
+            $table->foreign('tournaments_id')->references('id')->on('unique_tournamentsses');
         });
     }
 

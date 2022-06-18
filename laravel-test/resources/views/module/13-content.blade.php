@@ -32,7 +32,7 @@
                         <tr>
                        
                             <td class="text-center align-middle">{{$id++}}</td>
-                            <td><img src="https://api.sofascore.app/api/v1/player/3306/image" class="img-player" width="42" height="42" alt=""
+                            <td><img src="https://api.sofascore.app/api/v1/player/{{$player->id}}/image" class="img-player" width="42" height="42" alt=""
                                     width="21" height="21"></td>
                             <td class="align-middle">
                                 <h4 class="title-player">{{ $player->name }}</h4>
@@ -52,4 +52,3 @@
                 
             </div>
         </div>
-    </div>

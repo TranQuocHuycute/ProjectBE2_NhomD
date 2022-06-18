@@ -1,0 +1,33 @@
+.type-21{
+  position: relative;
+  width: 350px;
+  height: auto;
+  background-color: beige;
+  
+}
+.type-21 .item{
+  margin-top: 20px;
+  font-size: 0.2rem;
+}
+.type-21 h5{
+  padding-top: 8px;
+}
+.type-21 h5{
+  margin-left: 100px;
+}
+.type-21 .create{
+  margin-left: 90px;
+  background-color: antiquewhite;
+  border: none;
+}
+.type-21 .category{
+  background-color: antiquewhite;
+}
+.type-21 .item .dropdown{
+  display: flex;
+  justify-content: space-between;
+}
+.type-21 .fs-7{
+  font-size: 0.8rem;
+}
+
