@@ -95,4 +95,4 @@ Route::put('tournaments/edit', [TournamentsController::class, 'edit'])->name('to
 // player
 Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 Route::DELETE('/playerdetail/delete/{id}', [TeamDetailsController::class,'destroy']);
-Route::GET('/playerdeta
+

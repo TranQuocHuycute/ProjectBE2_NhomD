@@ -111,9 +111,16 @@ class TeamDetailsController extends Controller
         $player->player->update();
     }
 
+    public function destroy($id)
+    {
+        //
+        // DB::delete('delete from players where id = ?',[$id]);
+        DB::table('players')->where('id',$id)->delete();
+        return Redirect::action([TeamDetailsController::class, 'getTeam']);
+    }
 
         //
     }
 
+   
 
-}
