@@ -12,10 +12,10 @@
           <path d="M64 448h896v128h-896v-128z"></path>
           <path d="M64 704h896v128h-896v-128z"></path>
         </svg>List view</a>
-        <form method="POST" action="/playerdetail/refresh" onsubmit="return ConfirmDelete( this )">
-                    @method('Create')
+        <form method="get" action="/playerdetail/update" onsubmit="return ConfirmDelete( this )">
+                    @method('update')
                     @csrf
-                    <button type="button"  class="btn btn-primary">refresh</button>
+                    <button type="submit"  class="btn btn-primary">refresh</button>
                 </form>
        
          
@@ -31,7 +31,7 @@
         <div class="sc-2829e1d5-1 kEOano">
           @foreach ($player as $player)
           <a class="sc-8cd91851-0 fFQYvZ" href="/player/{{preg_replace('/\s+/', '',$player->name) }}/{{ $player->id }}">
-            <div class="sc-8cd91851-1 ipGgrS" style="width: 75px;"><img width="75" height="75" alt="Karim Benzema" src="{{ $player->avatar }}" class="sc-a7ad0435-0 gluUez">
+            <div class="sc-8cd91851-1 ipGgrS" style="width: 75px;"><img width="75" height="75" alt="Karim Benzema" src="https://api.sofascore.app/api/v1/player/{{ $player->id }}/image" class="sc-a7ad0435-0 gluUez">
               <div class="sc-8cd91851-2 iKKRor">
                 <div class="sc-8cd91851-6 dKEjkb">{{ $player->userCount }}</div>
               </div>

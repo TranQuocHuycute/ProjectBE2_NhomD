@@ -18,4 +18,9 @@ class player extends Model
     {
         return $this->belongsToMany(ratting::class);
     }
+     function update_data()
+    {
+        $id = $this->get('id');
+        return DB::table('players')->update($id);
+    }
 }

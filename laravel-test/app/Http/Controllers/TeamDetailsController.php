@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\player;
+use Database\Seeders\DatabaseSeeder;
 use Database\Seeders\PlayerSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,15 +18,13 @@ class TeamDetailsController extends Controller
      */
     public function index()
     {
-        
-     
-
     }
-    public function getTeam(){
+    public function getTeam()
+    {
 
         $obj = new Player();
-        $player = $obj-> get_all_data();
-        return view('teamdetail',['player' => $player]);
+        $player = $obj->get_all_data();
+        return view('teamdetail', ['player' => $player]);
     }
 
     /**
@@ -54,11 +54,10 @@ class TeamDetailsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($request)
     {
         //
-        $refresh = new PlayerSeeder();
-        $refresh->run();
+
     }
 
     /**
@@ -81,7 +80,15 @@ class TeamDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-      
+        $player =  Player::find($id);
+
+
+        $player->player->name = $request->name;
+        $player->player->slug = $request->slug;
+        $player->player->shortName = $request->shortName;
+        $player->player->position = $request->position;
+        $player->player->userCount = $request->userCount;
+        $player->player->update();
     }
 
 
@@ -95,7 +102,7 @@ class TeamDetailsController extends Controller
     {
         //
         // DB::delete('delete from players where id = ?',[$id]);
-        DB::table('players')->where('id',$id)->delete();
+        DB::table('players')->where('id', $id)->delete();
         return Redirect::action([TeamDetailsController::class, 'getTeam']);
     }
 }
