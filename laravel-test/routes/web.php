@@ -33,7 +33,7 @@ Route::get('/player', [PlayerController::class,'index']);
 //Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
 Route::get('/home', [CategoryController::class,"index"])->name("home");
-//Route::get('/login', [LoginController::class,"login"]);
+Route::get('admin/login', [LoginController::class,"login"]);
 
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
