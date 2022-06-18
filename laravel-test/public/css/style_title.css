@@ -1,0 +1,128 @@
+
+/* địa chỉ phụ */
+.address {
+  
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #00417a;
+    list-style: none;
+    margin: 0;
+    padding: 8px 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+/* end */
+
+.address li:last-child>* {
+    display: inline;
+}
+
+.address li>a {
+    color: #0057a3;
+}
+
+.address li>a:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+}
+
+.address li+li::before {
+    content: '›';
+    padding: 0 4px;
+}
+.hBrWcV {
+    position: relative;
+    background-color: #fff;
+    padding: 12px;
+    min-height: 1000px;
+}
+.hLaBJu {
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
+    flex: 2 1 auto;
+    padding: 5px;
+}.kmlQtX {
+    margin-top: -12px;
+}
+.hDkGff {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 1px;
+}.cYnkGM {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 120px;
+}.kIigpv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}.BaKCl {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 24, 0.14);
+    margin: 12px 51px;
+    padding: 8px;
+}
+.kdhaCQ {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 1px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}.follow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+.gZOuZg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 24px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    color: rgb(0, 87, 163);
+    border: 1px solid;
+}
+.fXAhuT{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 10px;
+}
+

@@ -1,0 +1,106 @@
+.type-02 {
+    background: rgb(11 87 163);
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.type-02 .container {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.Visit {
+    font-family: verdana;
+    font-size: 0.7rem;
+}
+
+.new {
+    font-family: verdana;
+}
+
+.right {
+    float: right;
+    font-family: verdana;
+    font-size: 0.7rem;
+}
+
+.search {
+    width: 500px;
+    height: 35px;
+    background: #00417a;
+}
+
+.search {
+    width: 500px;
+    height: 35px;
+    background: rgb(0, 65, 122);
+}
+
+.search-icon {
+    width: 35px;
+    height: 35px;
+    background: rgb(0, 76, 143);
+    color: white
+}
+
+.wrap-stream>a {
+    color: inherit;
+    padding-top: 2px;
+    text-decoration: none;
+}
+
+.wrap-stream>a:hover {
+    color: #3498db;
+    ;
+    text-decoration: underline;
+}
+
+.tops {
+    padding-top: 30px;
+}
+
+.pad {
+    padding-top: 60px;
+}
+
+.wrap>a {
+    color: inherit;
+    padding-top: 2px;
+    text-decoration: none;
+}
+
+.wrap>a:hover {
+    color: #3498db;
+    ;
+    text-decoration: underline;
+}
+
+.link {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 4px 4px 4px 0px;
+    color: inherit;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.container2>a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.container3 {
+    margin-bottom: 0px;
+    padding-top: 50px;
+}
+
+.container3>a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.imagelogo {
+    width: 170x;
+    height: 36px;
+}

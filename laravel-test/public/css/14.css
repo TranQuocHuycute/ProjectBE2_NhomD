@@ -1,0 +1,99 @@
+.matches .iqbqLr {
+  display: flex;
+  margin-bottom: 0px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 8px 0px;
+  overflow: hidden;
+  margin-top: 12px;
+  border-radius: 4px 4px 0px 0px;
+  text-transform: uppercase;
+  font-size: 15px;
+  background-color: #f1f2f5;
+}
+.matches .etHFso {
+  padding: 8px;
+  background-color: #f1f2f5;
+  height: 42px;
+}
+.matches .kdhaCQ {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 1px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.matches .kdhaCQ .bBZkJV {
+  color: #404040;
+  border: 1px solid rgba(0,12,24,0.14);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+@media (min-width: 992px) {
+  .matches .hibAwd {
+    min-height: 600px;
+  }
+}
+.matches .hibAwd {
+  padding: 0px 8px 4px;
+  min-height: auto;
+}
+.matches .hibAwd .buFif a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+.matches .hibAwd .fnZAhi {
+  padding: 5px 0px 4px;
+  min-height: 44px;
+}
+.matches .hibAwd .hDkGff {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 1px;
+}
+.matches .hibAwd .hDkGff .gYMraj {
+  min-height: 44px;
+  line-height: 1.2;
+  color: #808080;
+}
+.matches .hibAwd .hDkGff .jeUcCr {
+  font-size: 12px;
+  text-align: center;
+  margin-right: -4px;
+  width: 64px;
+  color: #808080;
+}
+.matches .hibAwd .hDkGff .kYeOMc {
+  height: 100%;
+  min-height: 28px;
+  border-left: 1px solid rgba(0,12,24,0.14);
+  margin: 0px 8px;
+}
+.matches .hibAwd .hDkGff .kTHity {
+  fill: #459428;
+}
+.matches .hibAwd .hDkGff .sc-abe75a67-1 {
+  margin-left: 5px;
+}
+.matches .hibAwd .hDkGff .frdFp {
+  width: 28px;
+  text-align: right;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.matches .hibAwd .hDkGff .eXPDKY {
+  margin-right: 8px;
+}
+.matches .hibAwd .hDkGff .hoXqpI {
+  flex: 1 0 64px;
+  overflow: auto;
+}
+.matches .BtMle {
+  border: 1px solid rgba(0,12,24,0.14);
+}
