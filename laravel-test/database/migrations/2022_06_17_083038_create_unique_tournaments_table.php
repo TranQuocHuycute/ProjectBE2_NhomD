@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlayersTable extends Migration
+class CreateUniqueTournamentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class CreatePlayersTable extends Migration
      */
     public function up()
     {
-        Schema::create('players', function (Blueprint $table) {
-            $table->id('id');
+        Schema::create('unique_tournaments', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->string('firstName')->nullable();
-            $table->string('lastName')->nullable();
             $table->string('slug');
-            $table->string('shortName');
+            $table->integer('shortName');
             $table->string('position');
             $table->integer('userCount');
-            $table->string('flags');
-            $table->string('avatar');
-            $table->string('country');
             $table->timestamps();
         });
     }
@@ -36,6 +31,6 @@ class CreatePlayersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('players');
+        Schema::dropIfExists('unique_tournaments');
     }
 }

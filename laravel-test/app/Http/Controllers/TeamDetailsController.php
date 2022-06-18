@@ -1,11 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\player;
-use App\Models\Rows;
-use Illuminate\Http\Request;
-use App\Models\Team;
 
+use App\Models\player;
+use Database\Seeders\DatabaseSeeder;
+use Database\Seeders\PlayerSeeder;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use App\Models\Team;
+use App\Models\Rows;
 class TeamDetailsController extends Controller
 {
     /**
@@ -16,12 +20,9 @@ class TeamDetailsController extends Controller
     public function index()
     {
 
-// '
-// SELECT DISTINCT teams.name FROM `rows` INNER JOIN teams ON rows.team_id = teams.id WHERE teams.tournaments_id = 626
-// '
-
     }
-    public function getTeam(){
+    public function getTeam()
+    {
 
 
         $obj = new Player();
@@ -76,6 +77,7 @@ class TeamDetailsController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -98,6 +100,18 @@ class TeamDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $player =  Player::find($id);
+
+
+        $player->player->name = $request->name;
+        $player->player->slug = $request->slug;
+        $player->player->shortName = $request->shortName;
+        $player->player->position = $request->position;
+        $player->player->userCount = $request->userCount;
+        $player->player->update();
+    }
+
+
         //
     }
 

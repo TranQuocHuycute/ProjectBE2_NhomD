@@ -25,18 +25,10 @@ use App\Models\Rows;
 |
 */
 
-
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/player', [PlayerController::class,'index']);
-// player
-Route::get('/playerdetail', [TeamDetailsController::class,'getTeam'])->name("playerdetail");
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//Route::get('/player', [PlayerController::class,'index']);
+Route::get('/player', [PlayerController::class,'index']);
 // player
 //Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
 
@@ -100,3 +92,7 @@ Route::get('tournaments/delete', [TournamentsController::class, 'delete'])->name
 Route::get('tournaments/add', [TournamentsController::class, 'add'])->name('tournaments.add')->middleware('auth');
 // Route::get('tournaments/edit', [TournamentsController::class, 'edit'])->name('tournaments.edit')->middleware('auth');
 Route::put('tournaments/edit', [TournamentsController::class, 'edit'])->name('tournaments.edit')->middleware('auth')->middleware('updateversion');
+// player
+Route::get('/playerdetail', [TeamDetailsController::class,'getTeam']);
+Route::DELETE('/playerdetail/delete/{id}', [TeamDetailsController::class,'destroy']);
+Route::GET('/playerdeta
